@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include<unistd.h>
 
 const int KB = 1000;
 const int MB = KB * 1000;
@@ -22,6 +23,8 @@ int main(void)
   for (int i = 0; i < n; i++) {
      y[i] = malloc(KB);
   }
+
+  sleep(7200);
 
  return 0;
 }
