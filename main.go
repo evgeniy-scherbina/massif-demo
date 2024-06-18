@@ -1,5 +1,7 @@
 package main
 
+import "math/rand"
+
 const (
 	KB = 1000
 	MB = KB * 1000
@@ -8,6 +10,9 @@ const (
 
 func allocate(bytes int) []byte {
 	x := make([]byte, bytes)
+	for i := 0; i < bytes; i++ {
+		x[i] = byte(rand.Int())
+	}
 	return x
 }
 
